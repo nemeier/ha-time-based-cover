@@ -1,0 +1,14 @@
+set_known_position:
+  target:
+    entity:
+      integration: time_based_cover
+      domain: cover
+  fields:
+    position:
+      required: true
+      example: 50
+      selector:
+        number:
+          min: 0
+          max: 100
+          unit_of_measurement: "%"

@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add time based cover",
+        "description": "Wraps an existing cover and estimates its position from how long the motor runs.",
+        "data": {
+          "name": "Name",
+          "source_cover": "Source cover",
+          "travel_time_up": "Travel time up",
+          "travel_time_down": "Travel time down"
+        },
+        "data_description": {
+          "source_cover": "The existing cover (e.g. Matter) that receives open/close/stop commands.",
+          "travel_time_up": "Seconds for a full travel from closed to open.",
+          "travel_time_down": "Seconds for a full travel from open to closed."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This source cover is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Time based cover options",
+        "data": {
+          "source_cover": "Source cover",
+          "travel_time_up": "Travel time up",
+          "travel_time_down": "Travel time down"
+        },
+        "data_description": {
+          "source_cover": "The existing cover (e.g. Matter) that receives open/close/stop commands.",
+          "travel_time_up": "Seconds for a full travel from closed to open.",
+          "travel_time_down": "Seconds for a full travel from open to closed."
+        }
+      }
+    }
+  },
+  "services": {
+    "set_known_position": {
+      "name": "Set known position",
+      "description": "Corrects the stored position without moving the cover.",
+      "fields": {
+        "position": {
+          "name": "Position",
+          "description": "The actual position of the cover (0 = closed, 100 = open)."
+        }
+      }
+    }
+  }
+}
